@@ -103,7 +103,23 @@
 
 <section id="projects">
   <h2>Projects</h2>
+  <article class="panel project featured">
+    <div class="media phone"><img src="assets/compass-widget.webp" width="300" height="673" alt="Screen recording of adding the Compass widget to an Android home screen and tapping it to start it" loading="lazy"></div>
+    <div>
+      <p class="eyebrow">Android app &middot; Kotlin</p>
+      <h3>Simple Android Compass</h3>
+      <p>Pixel phones don't ship with a stock compass, and the free ones I found were full of ads. So I built one: a full-screen compass plus a live home-screen widget that shows true north as the main reading, with magnetic north overlaid so the difference is visible.</p>
+      <ul>
+        <li>Turns the phone's fused rotation-vector sensor into a smoothed heading, handling tilt and the jump from 359&deg; to 0&deg;.</li>
+        <li>Calculates magnetic declination offline with Android's World Magnetic Model. The app has no internet permission and no third-party libraries.</li>
+        <li>Updates the widget from a foreground service, only while the screen is on and the heading moves at least 1&deg;, at about 12 updates a second at most.</li>
+      </ul>
+      <div class="chips"><span>Kotlin</span><span>Android SDK</span><span>Custom Canvas view</span><span>Foreground services</span><span>RemoteViews</span></div>
+      <p class="cta"><a href="https://github.com/IanHefflefinger/Simple-Android-Compass">View source on GitHub</a></p>
+    </div>
+  </article>
   <div class="panel">
+    <p class="eyebrow">Web &middot; AWS</p>
     <h3>This site: three iterations</h3>
     <p>I have rebuilt my portfolio three times, each time to fix a specific problem. It now costs very little to run and loads quickly worldwide because CloudFront caches it close to each visitor.</p>
     <svg viewBox="0 0 640 90" role="img" aria-label="Request path: visitor to Route 53 to CloudFront to S3">
@@ -119,11 +135,20 @@
       <li><strong>Version 3 (this site):</strong> A redesigned front end with no external dependencies, deployed by GitHub Actions that sign in to AWS with short-lived OIDC credentials instead of stored keys (<a href="https://github.com/IanHefflefinger/ianhefflefinger-site">source</a>).</li>
     </ol>
   </div>
-  <h3 style="margin-top:2rem">Earlier work</h3>
+<article class="panel project">
+    <div class="media browser"><img src="assets/weather-app.webp" width="960" height="452" alt="Screen recording of the weather app searching for a city" loading="lazy"></div>
+    <div>
+      <p class="eyebrow">Web app &middot; Node.js</p>
+      <h3>Weather App</h3>
+      <p>Enter a city and the Express backend calls the OpenWeatherMap API, picks out the data the page needs, and returns it to a Bootstrap front end that renders it.</p>
+      <div class="chips"><span>Node.js</span><span>Express</span><span>Handlebars</span><span>Bootstrap</span><span>OpenWeatherMap API</span></div>
+      <p class="cta"><a href="https://github.com/IanHefflefinger/weatherApp">View source on GitHub</a></p>
+    </div>
+  </article>
+  <h3 style="margin-top:2.5rem">Earlier work</h3>
   <ul>
     <li><a href="https://github.com/IanHefflefinger/CS-330">3D scene in C++ and OpenGL</a>, with lighting, texture, and free camera control.</li>
     <li><a href="https://github.com/IanHefflefinger/CS-499/tree/master/ApplesAndOranges/After/InventoryManagementSystemWithDatabase">Inventory management system</a> in Java with JDBC and MySQL.</li>
-    <li><a href="https://github.com/IanHefflefinger/weatherApp">Weather app</a> in Node and Express using the OpenWeatherMap API.</li>
     <li><a href="https://github.com/IanHefflefinger/todoListWithMongo">Todo list</a> with Node, Express, and MongoDB.</li>
   </ul>
 </section>
